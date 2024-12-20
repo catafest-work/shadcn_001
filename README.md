@@ -34,3 +34,54 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## First steps :
+
+- create the project and first run , is a default nextjs default page:
+  ```
+  shadcn_001>cd ..
+
+c:\>npx shadcn@latest init
+√ The path c:\ does not contain a package.json file. Would you like to start a new Next.js project? ... yes
+√ What is your project named? ... shadcn_001
+√ Creating a new Next.js project.
+√ Which style would you like to use? » Default
+√ Which color would you like to use as the base color? » Neutral
+√ Would you like to use CSS variables for theming? ... no / yes
+√ Writing components.json.
+√ Checking registry.
+√ Updating tailwind.config.ts
+√ Updating app\globals.css
+√ Installing dependencies.
+√ Created 1 file:
+  - lib\utils.ts
+
+Success! Project initialization completed.
+You may now add components.
+
+
+c:\>cd shadcn_001
+
+c:\shadcn_001>npm run dev
+
+> shadcn_001@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.16
+  - Local:        http://localhost:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 6.1s (546 modules)
+ GET / 200 in 6656ms
+ ✓ Compiled in 427ms (254 modules)
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\shadcn_001\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\shadcn_001\node_modules\typescript\lib\typescript.js', but to 'c:\shadcn_001\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ...
+  ```
+- fix warnings , check the lastest version amd update them:
+```
+shadcn_001>npm outdated
+shadcn_001>npm install next@latest webpack@latest
+```
