@@ -41,47 +41,77 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
   ```
   shadcn_001>cd ..
 
-c:\>npx shadcn@latest init
-√ The path c:\ does not contain a package.json file. Would you like to start a new Next.js project? ... yes
-√ What is your project named? ... shadcn_001
-√ Creating a new Next.js project.
-√ Which style would you like to use? » Default
-√ Which color would you like to use as the base color? » Neutral
-√ Would you like to use CSS variables for theming? ... no / yes
-√ Writing components.json.
-√ Checking registry.
-√ Updating tailwind.config.ts
-√ Updating app\globals.css
-√ Installing dependencies.
-√ Created 1 file:
-  - lib\utils.ts
-
-Success! Project initialization completed.
-You may now add components.
-
-
-c:\>cd shadcn_001
-
-c:\shadcn_001>npm run dev
-
-> shadcn_001@0.1.0 dev
-> next dev
-
- ⚠ Port 3000 is in use, trying 3001 instead.
-  ▲ Next.js 14.2.16
-  - Local:        http://localhost:3001
-
- ✓ Starting...
- ✓ Ready in 2.1s
- ○ Compiling / ...
- ✓ Compiled / in 6.1s (546 modules)
- GET / 200 in 6656ms
- ✓ Compiled in 427ms (254 modules)
-<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\shadcn_001\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\shadcn_001\node_modules\typescript\lib\typescript.js', but to 'c:\shadcn_001\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
-<w>  at resolve commonjs file ...
+  c:\>npx shadcn@latest init
+  √ The path c:\ does not contain a package.json file. Would you like to start a new Next.js project? ... yes
+  √ What is your project named? ... shadcn_001
+  √ Creating a new Next.js project.
+  √ Which style would you like to use? » Default
+  √ Which color would you like to use as the base color? » Neutral
+  √ Would you like to use CSS variables for theming? ... no / yes
+  √ Writing components.json.
+  √ Checking registry.
+  √ Updating tailwind.config.ts
+  √ Updating app\globals.css
+  √ Installing dependencies.
+  √ Created 1 file:
+    - lib\utils.ts
+  
+  Success! Project initialization completed.
+  You may now add components.
+  
+  
+  c:\>cd shadcn_001
+  
+  c:\shadcn_001>npm run dev
+  
+  > shadcn_001@0.1.0 dev
+  > next dev
+  
+   ⚠ Port 3000 is in use, trying 3001 instead.
+    ▲ Next.js 14.2.16
+    - Local:        http://localhost:3001
+  
+   ✓ Starting...
+   ✓ Ready in 2.1s
+   ○ Compiling / ...
+   ✓ Compiled / in 6.1s (546 modules)
+   GET / 200 in 6656ms
+   ✓ Compiled in 427ms (254 modules)
+  <w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\shadcn_001\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\shadcn_001\node_modules\typescript\lib\typescript.js', but to 'c:\shadcn_001\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+  <w>  at resolve commonjs file ...
   ```
+
 - fix warnings , check the lastest version amd update them:
-```
-shadcn_001>npm outdated
-shadcn_001>npm install next@latest webpack@latest
-```
+
+  ```
+    shadcn_001>npm outdated
+    shadcn_001>npm install next@latest webpack@latest
+  ```
+- run again and ... works:
+  
+  ```
+  shadcn_001>npm run dev
+
+  > shadcn_001@0.1.0 dev
+  > next dev
+  
+   ⚠ Port 3000 is in use, trying 3001 instead.
+     ▲ Next.js 15.1.2
+     - Local:        http://localhost:3001
+     - Network:      http://10.13.13.2:3001
+  
+   ✓ Starting...
+  
+     We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+     The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+  
+          - target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+  
+   ✓ Ready in 2.1s
+   ○ Compiling / ...
+   ✓ Compiled / in 4.5s (662 modules)
+   GET / 200 in 4994ms
+   ✓ Compiled in 230ms (306 modules)
+   ✓ Compiled /favicon.ico in 242ms (353 modules)
+   GET /favicon.ico 200 in 339ms
+  ```
