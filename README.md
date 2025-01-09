@@ -1,3 +1,7 @@
+## ... working in progress , see the next image , no source code with these update:
+
+![]()
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started - default start project for nextjs.
