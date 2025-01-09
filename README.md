@@ -1,5 +1,9 @@
 ## ... working in progress , see the next image , no source code with these update:
 
+ - Dialog with Calendar ...
+
+ - ChartContainer, RadialBar, ChartTooltip ...
+   
 !['shadcn.bmp'](shadcn.bmp)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
